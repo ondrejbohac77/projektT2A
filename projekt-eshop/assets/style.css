@@ -1,0 +1,232 @@
+/*GLOBÁLNÍ RESET A ZÁKLAD*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main, 'Inter', sans-serif);
+    background-color: #1a1a1b; 
+    color: #ffffff;            
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px; 
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+/*SITE HEADE*/
+.site-header {
+    background-color: #1a1a1b; 
+    color: #ffffff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+}
+
+.logo-link img {
+    height: 55px; 
+    width: auto;
+    display: block;
+    filter: none; 
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover img {
+    transform: scale(1.03); 
+}
+
+/* NAVIGACE */
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-list a {
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: none; 
+    letter-spacing: 0.5px;
+}
+
+.nav-list a:hover {
+    color: #3b82f6; 
+}
+
+.nav-list li:last-child a {
+    background-color: #2463eb; 
+    padding: 8px 20px;
+    border-radius: 50px; 
+    color: #fff;
+}
+
+.nav-list li:last-child a:hover {
+    background-color: #1d4ed8;
+    color: #fff;
+}
+
+/* KOŠÍK */
+.action-item.cart {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.action-item.cart svg {
+    width: 32px;  /* Zvětšený košík */
+    height: 32px;
+    fill: #ffffff;
+    transition: transform 0.2s;
+}
+
+.action-item.cart:hover svg {
+    transform: scale(1.1);
+}
+
+/* --- HERO SECTION --- */
+.banner-wrapper {
+    width: 100%;
+    background-color: #000;
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- SEKCE PRODUKTŮ --- */
+.recommended-section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+/* CSS GRID */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* PRODUCT CARD */
+.product-card {
+    border: 1px solid #333;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background: #232324;    
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.product-card:hover {
+    border-color: #3b82f6;
+    transform: translateY(-5px);
+}
+
+.product-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.product-type {
+    font-size: 0.75rem;
+    color: #888;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.product-image {
+    margin: 30px 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #444; 
+    padding-top: 20px;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+
+.btn-add {
+    background-color: #3b82f6;
+    color: #fff;
+    padding: 12px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-add:hover {
+    background-color: #2563eb;
+}
+
+/*FOOTER*/
+.site-footer {
+    background-color: #111112;
+    color: #fff;
+    padding: 80px 0 40px;
+    border-top: 1px solid #333;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.footer-bottom {
+    padding-top: 30px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #555;
+    border-top: 1px solid #222;
+}
