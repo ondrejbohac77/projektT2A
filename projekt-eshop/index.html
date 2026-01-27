@@ -1,56 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Shop</title>
+    <title>All for Bikes | Domov</title>
+    <link rel="stylesheet" href="assets/css/main.css"> 
 </head>
 <body>
-    <header class="site-header">
-    <div class="container header-content">
-        <div class="logo-wrapper">
-            <a href="index.html" class="logo-link">
-                <img src="assets/images/logo.png" alt="All for Bikes Logo" class="site-logo">
-            </a>
-        </div>
 
-        <div class="user-actions">
-            <a href="kosik-krok1.html" class="action-item cart">
-                <span class="icon">🛒</span>
-            </a>
-        </div>
-    </div>
-</header>
-    
-<footer class="site-footer">
-    <div class="container footer-grid">
-        <div class="footer-section">
-            <h4>Informace</h4>
-            <nav>
-                <ul>
+    <header class="site-header"> 
+        <div class="container header-content">
+            <div class="logo-wrapper">
+                <a href="index.html" class="logo-link">
+                    <img src="assets/images/logo.png" alt="All for Bikes Logo" class="site-logo"> 
+                </a>
+            </div>
+
+            <nav class="main-nav"> 
+                <ul class="nav-list">
+                    <li><a href="index.html">Domů</a></li>
+                    <li><a href="kategorie.html">Kategorie</a></li>
+                    <li><a href="produkty.html">Kola</a></li>
                     <li><a href="o-nas.html">O nás</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
             </nav>
-        </div>
 
-        <div class="footer-section">
-            <h4>Kontakt</h4>
-            <p>Email: info@allforbikes.cz</p>
-            <p>Tel: +420 123 456 789</p>
-        </div>
-
-        <div class="footer-section">
-            <h4>Sledujte nás</h4>
-            <div class="social-links">
-                <a href="404.html">FB</a> | <a href="404.html">IG</a> | <a href="404.html">YT</a>
+            <div class="user-actions">
+                <a href="kosik-krok1.html" class="action-item cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                    </svg>
+                </a>
             </div>
         </div>
-    </div>
-    
-    <div class="footer-bottom">
-        <p>&copy; 2026 All for Bikes - Studentský projekt PRG</p>
-    </div>
-</footer>
+    </header>
+
+    <main>
+        <section class="banner-wrapper">
+             <img src="assets/images/banner-allforbikes.png" alt="All for Bikes - Velký banner" class="hero-image"> 
+        </section>
+
+        <section class="container recommended-section">
+            <h2 class="section-title">Doporučená kola</h2> 
+            <div class="product-grid"> 
+                
+                <article class="product-card">
+                    <h3 class="product-title"><a href="produkt-detail.html">Santa Cruz Bronson 2025</a></h3>
+                    <p class="product-type">Trail</p>
+                    <div class="product-image">
+                        <img src="assets/images/Santa_Cruz_Bronson_2025.png" alt="Santa Cruz Bronson 2025" loading="lazy">
+                    </div>
+                    <div class="product-price-row">
+                        <span class="price">120 000 Kč</span>
+                        <a href="kosik-krok1.html" class="btn-add">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="product-description">Špičkové kolo pro nejtěžší sjezdy a traily.</p>
+                </article>
+
+                <article class="product-card">
+                    <h3 class="product-title"><a href="produkt-detail.html">Propain RAGE 3 R CF</a></h3>
+                    <p class="product-type">Downhill</p>
+                    <div class="product-image">
+                        <img src="assets/images/PROPAIN-Rage-3-R-CF.png" alt="Propain RAGE 3 R CF" loading="lazy">
+                    </div>
+                    <div class="product-price-row">
+                        <span class="price">85 000 Kč</span>
+                        <a href="kosik-krok1.html" class="btn-add">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="product-description">Rychlé a obratné kolo do každého terénu.</p>
+                </article>
+
+                <article class="product-card">
+                    <h3 class="product-title"><a href="produkt-detail.html">Kona Procces X CR</a></h3>
+                    <p class="product-type">Enduro</p>
+                    <div class="product-image">
+                        <img src="assets/images/KonaProcess-X.png" alt="Kona Procces X CR" loading="lazy">
+                    </div>
+                    <div class="product-price-row">
+                        <span class="price">99 000 Kč</span>
+                        <a href="kosik-krok1.html" class="btn-add">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="product-description">Nekompromisní stroj pro milovníky adrenalinu.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-section">
+                <h4>Informace</h4>
+                <nav>
+                    <ul>
+                        <li><a href="o-nas.html">O nás</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <p>Email: info@allforbikes.cz</p>
+                <p>Tel: +420 123 456 789</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Sledujte nás</h4>
+                <div class="social-links">
+                    <a href="404.html">FB</a> | <a href="404.html">IG</a> | <a href="404.html">YT</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 All for Bikes - Studentský projekt PRG</p>
+        </div>
+    </footer>
 </body>
 </html>
