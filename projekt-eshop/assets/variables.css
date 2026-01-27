@@ -1,0 +1,14 @@
+:root {
+    --primary-color: #f3f3f3; /* Světle šedá pro pozadí */
+    --secondary-color: #1a1a1a; /* Téměř černá pro text a hlavičku */
+    --accent-color: #000000; /* Čistě černá */
+    --price-color: #d11f1f; /* Červená pro cenu/akce */
+    --text-dark: #1a1a1a;
+    --text-light: #ffffff;
+    --border-color: #e5e5e5;
+    
+
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --border-radius: 0px; 
+    --shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
