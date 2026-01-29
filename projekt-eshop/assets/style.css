@@ -1,4 +1,4 @@
-/*GLOBÁLNÍ RESET A ZÁKLAD*/
+/* --- GLOBÁLNÍ RESET A ZÁKLAD --- */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: var(--font-main, 'Inter', sans-serif);
+    font-family: 'Inter', sans-serif;
     background-color: #1a1a1b; 
     color: #ffffff;            
     line-height: 1.6;
@@ -29,7 +29,7 @@ a {
     transition: 0.3s;
 }
 
-/*SITE HEADE*/
+/* --- SITE HEADER --- */
 .site-header {
     background-color: #1a1a1b; 
     color: #ffffff;
@@ -51,7 +51,6 @@ a {
     height: 55px; 
     width: auto;
     display: block;
-    filter: none; 
     transition: transform 0.3s ease;
 }
 
@@ -59,7 +58,7 @@ a {
     transform: scale(1.03); 
 }
 
-/* NAVIGACE */
+/* --- NAVIGACE --- */
 .nav-list {
     display: flex;
     list-style: none;
@@ -72,47 +71,35 @@ a {
     font-size: 0.95rem;
     text-transform: none; 
     letter-spacing: 0.5px;
+    color: #ffffff;
 }
 
 .nav-list a:hover {
     color: #3b82f6; 
 }
 
-.nav-list li:last-child a {
-    background-color: #2463eb; 
-    padding: 8px 20px;
-    border-radius: 50px; 
-    color: #fff;
-}
-
-.nav-list li:last-child a:hover {
-    background-color: #1d4ed8;
-    color: #fff;
-}
-
-/* KOŠÍK */
-.action-item.cart {
+/* --- UŽIVATELSKÉ AKCE (POUZE KOŠÍK) --- */
+.user-actions {
     display: flex;
     align-items: center;
-    margin-left: 20px;
 }
 
 .action-item.cart svg {
-    width: 32px;  /* Zvětšený košík */
+    width: 32px;  
     height: 32px;
     fill: #ffffff;
-    transition: transform 0.2s;
+    transition: transform 0.2s, fill 0.2s;
 }
 
 .action-item.cart:hover svg {
     transform: scale(1.1);
+    fill: #3b82f6; 
 }
 
 /* --- HERO SECTION --- */
 .banner-wrapper {
     width: 100%;
     background-color: #000;
-    position: relative;
 }
 
 .hero-image {
@@ -135,14 +122,12 @@ a {
     text-align: center;
 }
 
-/* CSS GRID */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
-/* PRODUCT CARD */
 .product-card {
     border: 1px solid #333;
     padding: 30px;
@@ -162,7 +147,6 @@ a {
     font-weight: 800;
     text-transform: uppercase;
     margin-bottom: 5px;
-    color: #fff;
 }
 
 .product-type {
@@ -201,18 +185,16 @@ a {
     border-radius: 4px;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .btn-add:hover {
     background-color: #2563eb;
 }
 
-/*FOOTER*/
+/* --- FOOTER --- */
 .site-footer {
     background-color: #111112;
-    color: #fff;
-    padding: 80px 0 40px;
+    padding: 60px 0 30px;
     border-top: 1px solid #333;
 }
 
