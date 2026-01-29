@@ -212,3 +212,53 @@ a {
     color: #555;
     border-top: 1px solid #222;
 }
+
+/* --- 404 ERROR PAGE STYLY --- */
+.error-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    text-align: center;
+}
+
+.error-content h1 {
+    font-size: 10rem;
+    font-weight: 900;
+    line-height: 1;
+    color: #3b82f6;
+    margin-bottom: 10px;
+}
+
+.error-content h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.error-content p {
+    font-size: 1.1rem;
+    color: #888;
+    margin-bottom: 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #3b82f6;
+    color: #ffffff;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);
+    color: #ffffff;
+}
