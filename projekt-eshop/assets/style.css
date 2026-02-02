@@ -387,10 +387,73 @@ a {
     color: #3b82f6;
 }
 
-/* Responzivita: na mobilu 1 sloupec, na tabletu 2 */
-@media (max-width: 992px) {
-    .category-grid { grid-template-columns: repeat(2, 1fr); }
+/*RESPONZIVITA*/
+
+/*TABLET*/
+@media (max-width: 1024px) {
+    .category-grid, 
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
 }
-@media (max-width: 600px) {
-    .category-grid { grid-template-columns: 1fr; }
+
+/*MOBILNÍ TELEFONY*/
+@media (max-width: 768px) {
+    /*HLAVIČKA*/
+    .header-content {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .nav-list {
+        gap: 15px;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    /*Úprava titulků*/
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .recommended-section,
+    .category-section {
+        padding: 40px 15px;
+    }
+
+    .category-grid, 
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /*PATIČKA*/
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .category-image {
+        height: 200px;
+    }
+
+    /* 404 STRÁNKA */
+    .error-content h1 {
+        font-size: 6rem;
+    }
+}
+
+/*MALÉ MOBILY*/
+@media (max-width: 480px) {
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .logo-link img {
+        height: 40px; 
+    }
 }
