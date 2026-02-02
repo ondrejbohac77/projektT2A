@@ -1,11 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O-nás</title>
+    <title>O nás | All for Bikes</title>
+    <link rel="stylesheet" href="assets/style.css"> 
 </head>
 <body>
-    
+
+    <header class="site-header"> 
+        <div class="container header-content">
+            <div class="logo-wrapper">
+                <a href="index.html" class="logo-link">
+                    <img src="assets/images/logo.png" alt="All for Bikes Logo"> 
+                </a>
+            </div>
+            <nav class="main-nav"> 
+                <ul class="nav-list">
+                    <li><a href="index.html">Domů</a></li>
+                    <li><a href="kategorie.html">Kategorie</a></li>
+                    <li><a href="produkty.html">Kola</a></li>
+                    <li><a href="o-nas.html">O nás</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="kosik-krok1.html" class="action-item cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+   <section class="hero-section">
+    <div class="video-container">
+        <video autoplay muted loop playsinline class="hero-video-bg">
+            <source src="https://www.youtube.com/watch?v=rm_Op9xBbRc" type="video/mp4">
+            Váš prohlížeč nepodporuje video tag.
+        </video>
+        
+        <div class="hero-video-overlay">
+            <div class="container">
+                <h1 class="hero-title">All for Bikes</h1>
+                <p class="hero-subtitle">Vše pro vaši jízdu na jednom místě</p>
+                <a href="produkty.html" class="btn-primary">Prozkoumat kola</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <main class="container about-content">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2>Kdo jsme?</h2>
+                <p>All for Bikes vzniklo z čisté vášně pro dvě kola. Nejsme jen obyčejný e-shop, jsme komunita jezdců, kteří testují každý model, který u nás najdete. Naším cílem je dodávat to nejlepší vybavení jak pro profesionály, tak pro ty, kteří s cyklistikou teprve začínají.</p>
+                
+                <h3>Naše mise</h3>
+                <p>Věříme, že kolo je nejlepší nástroj pro svobodu. Proto se zaměřujeme na značky, které posouvají hranice technologií a designu. Ať už hledáte stroj na sjezd v bikeparku nebo gravel na dlouhé výpravy, jsme tu, abychom vám poradili s výběrem bez kompromisů.</p>
+            </div>
+            <div class="about-features">
+                <div class="feature-item">
+                    <span class="feature-icon">✔</span>
+                    <h4>Odborné poradenství</h4>
+                    <p>Sami jezdíme, takže víme, co prodáváme.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✔</span>
+                    <h4>Prémiové značky</h4>
+                    <p>Santa Cruz, Specialized, Kona a další.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✔</span>
+                    <h4>Vlastní servis</h4>
+                    <p>O vaše kolo se postaráme i po nákupu.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-section">
+                <h4>Informace</h4>
+                <ul>
+                    <li><a href="o-nas.html">O nás</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <p>Email: <a href="mailto:info@allforbikes.cz">info@allforbikes.cz</a></p>
+                <p>Tel: +420 123 456 789</p>
+            </div>
+            <div class="footer-section">
+                <h4>Sledujte nás</h4>
+                <ul>
+                    <li><a href="404.html">Facebook</a></li>
+                    <li><a href="404.html">Instagram</a></li>
+                    <li><a href="404.html">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 All for Bikes - Studentský projekt PRG</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
