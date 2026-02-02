@@ -1,11 +1,256 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produkty/title>
+    <title>Nabídka kol | All for Bikes</title>
+    <link rel="stylesheet" href="assets/style.css"> 
 </head>
 <body>
-    
+
+    <header class="site-header"> 
+        <div class="container header-content">
+            <div class="logo-wrapper">
+                <a href="index.html" class="logo-link">
+                    <img src="assets/images/logo.png" alt="All for Bikes Logo"> 
+                </a>
+            </div>
+            <nav class="main-nav"> 
+                <ul class="nav-list">
+                    <li><a href="index.html">Domů</a></li>
+                    <li><a href="kategorie.html">Kategorie</a></li>
+                    <li><a href="produkty.html">Kola</a></li>
+                    <li><a href="o-nas.html">O nás</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="kosik-krok1.html" class="action-item cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container recommended-section">
+        <h1 class="section-title">Všechna kola</h1>
+
+        <div class="product-grid"> 
+            
+            <article class="product-card">
+                <h3 class="product-title"><a href="produkt-detail.html">Santa Cruz Bronson</a></h3>
+                <p class="product-type">Enduro</p>
+                <div class="product-image"><img src="assets/images/Santa_Cruz_Bronson_2025.png" alt="Santa Cruz Bronson"></div>
+                <div class="product-price-row">
+                    <span class="price">120 000 Kč</span>
+                    <a href="kosik-krok1.html" class="btn-add"><svg width="18" height="18" fill="white" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg></a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <h3 class="product-title"><a href="produkt-detail.html">Trek Fuel EX</a></h3>
+                <p class="product-type">Trail</p>
+                <div class="product-image"><img src="assets/images/Trek_Fuel_EX.png" alt="Trek Fuel EX"></div>
+                <div class="product-price-row">
+                    <span class="price">95 000 Kč</span>
+                    <a href="kosik-krok1.html" class="btn-add"><svg width="18" height="18" fill="white" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg></a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <h3 class="product-title"><a href="produkt-detail.html">Specialized S-Works </a></h3>
+                <p class="product-type">Enduro</p>
+                <div class="product-image"><img src="assets/images/specialized-stump.png" alt="Specialized Stumpjumper"></div>
+                <div class="product-price-row">
+                    <span class="price">110 000 Kč</span>
+                    <a href="kosik-krok1.html" class="btn-add"><svg width="18" height="18" fill="white" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg></a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <h3 class="product-title"><a href="produkt-detail.html">Propain RAGE 3 R CF</a></h3>
+                <p class="product-type">Downhill</p>
+                <div class="product-image"><img src="assets/images/PROPAIN-Rage-3-R-CF.png" alt="Propain RAGE"></div>
+                <div class="product-price-row">
+                    <span class="price">85 000 Kč</span>
+                    <a href="kosik-krok1.html" class="btn-add"><svg width="18" height="18" fill="white" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg></a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <h3 class="product-title"><a href="produkt-detail.html">Santa-Cruz-V10.8</a></h3>
+                <p class="product-type">Downhill</p>
+                <div class="product-image"><img src="assets/images/Santa-Cruz-V10.8.png" alt="Commencal FRS"></div>
+                <div class="product-price-row">
+                    <span class="price">105 000 Kč</span>
+                    <a href="kosik-krok1.html" class="btn-add"><svg width="18" height="18" fill="white" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg></a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <h3 class="product-title"><a href="produkt-detail.html">Canyon Specral 8</a></h3>
+                <p class="product-type">Trail</p>
+                <div class="product-image"><img src="assets/images/canyon-spectral-2025.png" alt="Canyon Sender"></div>
+                <div class="product-price-row">
+                    <span class="price">70 000 Kč</span>
+                    <a href="kosik-krok1.html" class="btn-add"><svg width="18" height="18" fill="white" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg></a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <h3 class="product-title"><a href="produkt-detail.html">Kona Process X CR</a></h3>
+                <p class="product-type">Enduro</p>
+                <div class="product-image"><img src="assets/images/KonaProcess-X.png" alt="Kona Process"></div>
+                <div class="product-price-row">
+                    <span class="price">99 000 Kč</span>
+                    <a href="kosik-krok1.html" class="btn-add"><svg width="18" height="18" fill="white" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg></a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <h3 class="product-title"><a href="produkt-detail.html">Propain Trickshot</a></h3>
+                <p class="product-type">Dirt</p>
+                <div class="product-image"><img src="assets/images/PROPAIN-Trickshot.png" alt="Rocky Mountain"></div>
+                <div class="product-price-row">
+                    <span class="price">55 000 Kč</span>
+                    <a href="kosik-krok1.html" class="btn-add"><svg width="18" height="18" fill="white" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg></a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <h3 class="product-title"><a href="produkt-detail.html">Mondraker Summum</a></h3>
+                <p class="product-type">Downhill</p>
+                <div class="product-image"><img src="assets/images/Mondraker_downhill.png" alt="Yeti SB160"></div>
+                <div class="product-price-row">
+                    <span class="price">300 000 Kč</span>
+                    <a href="kosik-krok1.html" class="btn-add"><svg width="18" height="18" fill="white" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg></a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <h3 class="product-title"><a href="produkt-detail.html">Turbo Levo SL</a></h3>
+                <p class="product-type">E-kola</p>
+                <div class="product-image"><img src="assets/images/turbo-levo.png" alt="Turbo Levo"></div>
+                <div class="product-price-row">
+                    <span class="price">165 000 Kč</span>
+                    <a href="kosik-krok1.html" class="btn-add"><svg width="18" height="18" fill="white" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg></a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <h3 class="product-title"><a href="produkt-detail.html">Orbea Wild M-LTD</a></h3>
+                <p class="product-type">E-kola</p>
+                <div class="product-image"><img src="assets/images/orbea-wild.png" alt="Orbea Wild"></div>
+                <div class="product-price-row">
+                    <span class="price">210 000 Kč</span>
+                    <a href="kosik-krok1.html" class="btn-add"><svg width="18" height="18" fill="white" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg></a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <h3 class="product-title"><a href="produkt-detail.html">Mondraker Crafty</a></h3>
+                <p class="product-type">E-kola</p>
+                <div class="product-image"><img src="assets/images/mondraker-crafty.png" alt="Mondraker Crafty"></div>
+                <div class="product-price-row">
+                    <span class="price">140 000 Kč</span>
+                    <a href="kosik-krok1.html" class="btn-add"><svg width="18" height="18" fill="white" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg></a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <h3 class="product-title"><a href="produkt-detail.html">Canyon Grizl CF</a></h3>
+                <p class="product-type">Gravel</p>
+                <div class="product-image"><img src="assets/images/canyon-grizl.png" alt="Canyon Grizl"></div>
+                <div class="product-price-row">
+                    <span class="price">55 000 Kč</span>
+                    <a href="kosik-krok1.html" class="btn-add"><svg width="18" height="18" fill="white" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg></a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <h3 class="product-title"><a href="produkt-detail.html">Cannondale Topstone</a></h3>
+                <p class="product-type">Gravel</p>
+                <div class="product-image"><img src="assets/images/topstone.png" alt="Cannondale Topstone"></div>
+                <div class="product-price-row">
+                    <span class="price">68 000 Kč</span>
+                    <a href="kosik-krok1.html" class="btn-add"><svg width="18" height="18" fill="white" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg></a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <h3 class="product-title"><a href="produkt-detail.html">BMC Kaius 01</a></h3>
+                <p class="product-type">Gravel</p>
+                <div class="product-image"><img src="assets/images/bmc-kaius.png" alt="BMC Kaius"></div>
+                <div class="product-price-row">
+                    <span class="price">125 000 Kč</span>
+                    <a href="kosik-krok1.html" class="btn-add"><svg width="18" height="18" fill="white" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg></a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <h3 class="product-title"><a href="produkt-detail.html">Early Rider Seeker</a></h3>
+                <p class="product-type">Dětská kola</p>
+                <div class="product-image"><img src="assets/images/early-rider.png" alt="Early Rider"></div>
+                <div class="product-price-row">
+                    <span class="price">18 000 Kč</span>
+                    <a href="kosik-krok1.html" class="btn-add"><svg width="18" height="18" fill="white" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg></a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <h3 class="product-title"><a href="produkt-detail.html">Woom 4 Off</a></h3>
+                <p class="product-type">Dětská kola</p>
+                <div class="product-image"><img src="assets/images/woom-4.png" alt="Woom 4"></div>
+                <div class="product-price-row">
+                    <span class="price">15 500 Kč</span>
+                    <a href="kosik-krok1.html" class="btn-add"><svg width="18" height="18" fill="white" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg></a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <h3 class="product-title"><a href="produkt-detail.html">Commencal Clash Kids</a></h3>
+                <p class="product-type">Dětská kola</p>
+                <div class="product-image"><img src="assets/images/clash-kids.png" alt="Commencal Clash"></div>
+                <div class="product-price-row">
+                    <span class="price">42 000 Kč</span>
+                    <a href="kosik-krok1.html" class="btn-add"><svg width="18" height="18" fill="white" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg></a>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-section">
+                <h4>Informace</h4>
+                <ul>
+                    <li><a href="o-nas.html">O nás</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <p>Email: <a href="mailto:info@allforbikes.cz">info@allforbikes.cz</a></p>
+                <p>Tel: +420 123 456 789</p>
+            </div>
+            <div class="footer-section">
+                <h4>Sledujte nás</h4>
+                <ul>
+                    <li><a href="404.html">Facebook</a></li>
+                    <li><a href="404.html">Instagram</a></li>
+                    <li><a href="404.html">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 All for Bikes - Studentský projekt PRG</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
