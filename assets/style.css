@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. GLOBÁLNÍ RESET A ZÁKLAD
-   ========================================================================== */
+/* --- GLOBÁLNÍ RESET A ZÁKLAD --- */
 * {
     margin: 0;
     padding: 0;
@@ -9,14 +7,14 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #1a1a1b; 
+    background-color: #1a1a1b;
     color: #ffffff;            
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Přidáno pro zamezení vodorovného posuvníku */
 }
 
 .container {
-    max-width: 1400px; 
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 25px;
 }
@@ -32,11 +30,9 @@ a {
     transition: 0.3s;
 }
 
-/* ==========================================================================
-   2. SITE HEADER & NAVIGACE
-   ========================================================================== */
+/* --- SITE HEADER --- */
 .site-header {
-    background-color: #1a1a1b; 
+    background-color: #1a1a1b;
     color: #ffffff;
     padding: 10px 0;
     position: sticky;
@@ -53,16 +49,17 @@ a {
 }
 
 .logo-link img {
-    height: 55px; 
+    height: 55px;
     width: auto;
     display: block;
     transition: transform 0.3s ease;
 }
 
 .logo-link:hover img {
-    transform: scale(1.03); 
+    transform: scale(1.03);
 }
 
+/* --- NAVIGACE --- */
 .nav-list {
     display: flex;
     list-style: none;
@@ -73,14 +70,16 @@ a {
 .nav-list a {
     font-weight: 600;
     font-size: 0.95rem;
+    text-transform: none;
     letter-spacing: 0.5px;
     color: #ffffff;
 }
 
 .nav-list a:hover {
-    color: #3b82f6; 
+    color: #3b82f6;
 }
 
+/* UŽIVATELSKÉ AKCE */
 .user-actions {
     display: flex;
     align-items: center;
@@ -95,12 +94,10 @@ a {
 
 .action-item.cart:hover svg {
     transform: scale(1.1);
-    fill: #3b82f6; 
+    fill: #3b82f6;
 }
 
-/* ==========================================================================
-   3. HERO SEKCE (BANNER & VIDEO)
-   ========================================================================== */
+/* --- HERO SEKCE --- */
 .banner-wrapper {
     width: 100%;
     background-color: #000;
@@ -128,8 +125,10 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 100%; 
+    min-width: 100%;
     min-height: 100%;
+    width: auto;
+    height: auto;
     object-fit: cover;
     z-index: 1;
 }
@@ -155,8 +154,8 @@ a {
     line-height: 0.9;
     margin-bottom: 15px;
     background: linear-gradient(to bottom, #fff, #999);
-    -webkit-background-clip: text; 
-    background-clip: text; 
+    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
 }
@@ -167,10 +166,8 @@ a {
     color: #a1a1a1;
 }
 
-/* ==========================================================================
-   4. PRODUKTY & KATEGORIE
-   ========================================================================== */
-.recommended-section, .category-section {
+/* --- SEKCE PRODUKTŮ --- */
+.recommended-section {
     padding: 80px 0;
 }
 
@@ -183,25 +180,22 @@ a {
     text-align: center;
 }
 
-.product-grid, .category-grid {
+.product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
-.product-card, .category-card {
+.product-card {
     border: 1px solid #333;
     padding: 30px;
+    display: flex;
+    flex-direction: column;
     background: #232324;    
     transition: transform 0.3s, border-color 0.3s;
 }
 
-.product-card {
-    display: flex;
-    flex-direction: column;
-}
-
-.product-card:hover, .category-card:hover {
+.product-card:hover {
     border-color: #3b82f6;
     transform: translateY(-5px);
 }
@@ -221,19 +215,19 @@ a {
     margin-bottom: 20px;
 }
 
-.product-image, .category-image {
+.product-image {
     margin: 30px 0;
+    flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
 }
 
 .product-price-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid #444; 
+    border-top: 1px solid #444;
     padding-top: 20px;
 }
 
@@ -251,11 +245,72 @@ a {
     align-items: center;
 }
 
-.btn-add:hover { background-color: #2563eb; }
+.btn-add:hover {
+    background-color: #2563eb;
+}
 
-/* ==========================================================================
-   5. O NÁS & TÝM
-   ========================================================================== */
+/* --- SEKCE KATEGORIÍ --- */
+.category-section {
+    padding: 60px 25px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.category-card {
+    position: relative;
+    background-color: #232324;
+    border: 1px solid #333;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.3s ease;
+}
+
+.category-card:hover {
+    border-color: #3b82f6;
+}
+
+.category-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.category-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.category-card:hover .category-image img {
+    transform: scale(1.1);
+}
+
+.category-info {
+    padding: 20px;
+    text-align: center;
+    background-color: #232324;
+}
+
+.category-info h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.category-card:hover .category-info h3 {
+    color: #3b82f6;
+}
+
+/* --- O NÁS --- */
 .about-content {
     padding: 100px 25px;
     max-width: 1100px;
@@ -272,6 +327,7 @@ a {
     margin-top: 30px;
     color: #3b82f6;
     text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 .about-text h2 {
@@ -291,12 +347,24 @@ a {
     background: #3b82f6;
 }
 
+.about-text p {
+    font-size: 1.15rem;
+    color: #a1a1a1;
+    line-height: 1.8;
+}
+
+.about-features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .feature-item {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.05);
     padding: 30px;
     border-radius: 15px;
-    backdrop-filter: blur(10px); 
+    backdrop-filter: blur(10px);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -306,19 +374,50 @@ a {
     transform: translateX(10px);
 }
 
-.team-section { padding: 80px 25px; }
-.team-card { text-align: center; }
+.feature-icon {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.feature-item h4 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+/* TÝM */
+.team-section {
+    padding: 80px 25px;
+}
+
+.team-card {
+    text-align: center;
+}
+
 .team-photo {
-    width: 180px; height: 180px;
-    object-fit: cover; border-radius: 50%;
-    border: 3px solid #3b82f6; margin: 0 auto;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #3b82f6;
+    margin: 0 auto;
     transition: transform 0.3s ease;
 }
-.team-card:hover .team-photo { transform: scale(1.05); border-color: #ffffff; }
 
-/* ==========================================================================
-   6. KONTAKTNÍ STRÁNKA (VYLEPŠENO)
-   ========================================================================== */
+.team-card:hover .team-photo {
+    transform: scale(1.05);
+    border-color: #ffffff;
+}
+
+.team-desc {
+    font-size: 0.9rem;
+    color: #a1a1a1;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+/* --- KONTAKT (DOPLNĚNO) --- */
 .contact-main { padding: 80px 0; text-align: center; }
 .contact-header { max-width: 800px; margin: 0 auto 60px; }
 .contact-subtitle { font-size: 1.3rem; color: #a1a1a1; line-height: 1.6; }
@@ -361,7 +460,7 @@ a {
     transition: all 0.3s ease;
 }
 
-/* ZAKÁZÁNÍ ZVĚTŠOVÁNÍ TEXTAREA */
+/* Zamezení zvětšování textového pole (REQUEST) */
 .form-group textarea {
     resize: none;
 }
@@ -396,7 +495,7 @@ a {
     box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
 }
 
-/* ZAROVNÁNÍ INFORMACÍ NA STŘED */
+/* Zarovnání kontaktů na střed (REQUEST) */
 .contact-info-blocks {
     display: flex;
     justify-content: center;
@@ -405,17 +504,109 @@ a {
     text-align: center;
 }
 
-.info-item p {
+.info-item h3 {
+    margin-bottom: 10px;
+}
+
+/* --- DETAIL PRODUKTU (DOPLNĚNO) --- */
+.product-detail-section {
+    padding: 60px 25px;
+}
+
+.product-main-card {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* Fotka zabírá víc místa */
+    gap: 60px;
+    background: #232324;
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    align-items: center;
+}
+
+.product-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-category-tag {
+    color: #3b82f6;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.product-detail-title {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 10px 0 20px;
+    line-height: 1.1;
+    color: #ffffff;
+}
+
+.product-short-info {
+    font-size: 1.1rem;
+    color: #a1a1a1;
+    margin-bottom: 30px;
+}
+
+.product-price-large {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.btn-add-to-cart {
+    width: 100%;
+    background: #3b82f6;
+    color: #fff;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    transition: 0.3s;
+}
+
+.btn-add-to-cart:hover {
+    background: #2563eb;
+    transform: scale(1.02);
+}
+
+.product-description-wrapper {
+    margin-top: 60px;
+    padding: 0 25px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.description-text {
+    margin-top: 20px;
+    font-size: 1.15rem;
     color: #a1a1a1;
 }
 
-/* ==========================================================================
-   7. FOOTER & OSTATNÍ (404, ATD.)
-   ========================================================================== */
+.description-text p {
+    margin-bottom: 20px;
+}
+
+/* --- FOOTER --- */
 .site-footer {
-    background-color: #111112; 
-    padding: 80px 0 0; 
+    background-color: #111112;
+    padding: 80px 0 0;
     border-top: 1px solid #333;
+    color: #ffffff;
 }
 
 .footer-grid {
@@ -427,15 +618,57 @@ a {
 
 .footer-section h4 {
     font-size: 1.1rem;
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 1px;
     margin-bottom: 25px;
-    color: #3b82f6; 
+    color: #3b82f6;
 }
 
-.footer-section ul { list-style: none; }
-.footer-section ul li { margin-bottom: 12px; }
-.footer-section ul li a { color: #a1a1a1; position: relative; }
-.footer-section ul li a:hover { color: #ffffff; }
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+    font-size: 0.95rem;
+    color: #a1a1a1;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ffffff;
+}
+
+.footer-section ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #3b82f6;
+    transition: width 0.3s ease;
+}
+
+.footer-section ul li a:hover::after {
+    width: 100%;
+}
+
+.footer-section p {
+    font-size: 0.95rem;
+    color: #a1a1a1;
+}
+
+.footer-section p a {
+    color: #3b82f6;
+    font-weight: 600;
+}
 
 .footer-bottom {
     background-color: #0a0a0b;
@@ -444,12 +677,51 @@ a {
     border-top: 1px solid #222;
 }
 
+.footer-bottom p {
+    font-size: 0.8rem;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
 .disclaimer {
     margin-bottom: 10px;
-    opacity: 0.6;
-    font-size: 0.75rem;
-    text-transform: uppercase;
+    opacity: 0.7;
     letter-spacing: 1px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+/* --- OSTATNÍ (404, TLAČÍTKA) --- */
+.error-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    text-align: center;
+}
+
+.error-content h1 {
+    font-size: 10rem;
+    font-weight: 900;
+    line-height: 1;
+    color: #3b82f6;
+    margin-bottom: 10px;
+}
+
+.error-content h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.error-content p {
+    font-size: 1.1rem;
+    color: #888;
+    margin-bottom: 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .btn-primary {
@@ -460,26 +732,103 @@ a {
     border-radius: 50px;
     font-weight: 700;
     text-transform: uppercase;
-    transition: 0.3s;
+    letter-spacing: 1px;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .btn-primary:hover {
     background-color: #2563eb;
     transform: scale(1.05);
+    color: #ffffff;
 }
 
-/* ==========================================================================
-   8. RESPONZIVITA
-   ========================================================================== */
+/* --- RESPONZIVITA --- */
+
+/* TABLET */
 @media (max-width: 1024px) {
-    .product-grid, .category-grid { grid-template-columns: repeat(2, 1fr); }
+    .category-grid,
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    /* Úprava pro detail produktu na tabletu */
+    .product-main-card {
+        padding: 30px;
+        gap: 40px;
+    }
 }
 
+/* MOBILNÍ TELEFONY */
 @media (max-width: 768px) {
-    .header-content { flex-direction: column; gap: 20px; }
-    .nav-list { gap: 15px; flex-wrap: wrap; justify-content: center; }
-    .about-grid, .footer-grid, .product-grid, .category-grid, .form-row { grid-template-columns: 1fr; }
+    /* HLAVIČKA */
+    .header-content {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .nav-list {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* OSTATNÍ GRIDY */
+    .about-grid,
+    .footer-grid,
+    .form-row,
+    .category-grid,
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* KONTAKT */
     .contact-form { padding: 25px; }
-    .section-title { font-size: 1.8rem; }
     .contact-info-blocks { flex-direction: column; gap: 40px; }
+
+    /* DETAIL PRODUKTU */
+    .product-main-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-detail-title {
+        font-size: 2rem;
+    }
+    
+    .product-description-wrapper {
+        padding: 0;
+    }
+
+    /* TEXTY */
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .recommended-section,
+    .category-section {
+        padding: 40px 15px;
+    }
+
+    .category-image {
+        height: 200px;
+    }
+
+    /* 404 */
+    .error-content h1 {
+        font-size: 6rem;
+    }
+}
+
+/* MALÉ MOBILY */
+@media (max-width: 480px) {
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+   
+    .logo-link img {
+        height: 40px;
+    }
 }
