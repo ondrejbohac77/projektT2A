@@ -190,7 +190,49 @@ a {
     background-color: #2563eb;
 }
 
-/* --- O NÁS (OPRAVENO PRO VIDEO) --- */
+/*O NÁS (OPRAVENO PRO VIDEO)*/
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #a1a1a1;
+}
+
+.about-subtitle {
+    margin-top: 30px;
+    color: #3b82f6;
+    text-transform: uppercase;
+}
+
+.team-section {
+    padding: 80px 25px;
+}
+
+.team-card {
+    text-align: center;
+}
+
+.team-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #3b82f6;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-photo {
+    transform: scale(1.05);
+    border-color: #ffffff;
+}
+
+.team-desc {
+    font-size: 0.9rem;
+    color: #a1a1a1;
+    margin-top: 15px;
+    line-height: 1.5;
+}
 
 .video-container {
     position: relative;
@@ -200,7 +242,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000; /* Důležité pozadí */
+    background-color: #000;
 }
 
 .hero-video-bg {
@@ -213,12 +255,12 @@ a {
     width: auto;
     height: auto;
     object-fit: cover;
-    z-index: 1; /* Opraveno z -1 na 1, aby bylo nad body pozadím */
+    z-index: 1;
 }
 
 .hero-video-overlay {
     position: relative;
-    z-index: 2; /* Overlay musí být nad videem */
+    z-index: 2;
     width: 100%;
     height: 100%;
     background: linear-gradient(0deg, rgba(26,26,27,1) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 100%);
@@ -238,7 +280,6 @@ a {
     margin-bottom: 15px;
     background: linear-gradient(to bottom, #fff, #999);
     
-    /* OPRAVENO: Přidáno clip, aby byl text vidět */
     -webkit-background-clip: text; 
     background-clip: text; 
     -webkit-text-fill-color: transparent;
@@ -395,6 +436,18 @@ a {
     color: #555;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+.disclaimer {
+    margin-bottom: 10px;
+    opacity: 0.7;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.footer-bottom {
+    padding: 30px 0;
 }
 
 
