@@ -78,7 +78,7 @@ a {
     color: #3b82f6; 
 }
 
-/* --- UŽIVATELSKÉ AKCE (POUZE KOŠÍK) --- */
+/*UŽIVATELSKÉ AKCE*/
 .user-actions {
     display: flex;
     align-items: center;
@@ -96,7 +96,6 @@ a {
     fill: #3b82f6; 
 }
 
-/* --- HERO SECTION --- */
 .banner-wrapper {
     width: 100%;
     background-color: #000;
@@ -108,7 +107,7 @@ a {
     display: block;
 }
 
-/* --- SEKCE PRODUKTŮ --- */
+/*SEKCE PRODUKTŮ*/
 .recommended-section {
     padding: 80px 0;
 }
@@ -191,7 +190,7 @@ a {
     background-color: #2563eb;
 }
 
-/*O NÁS*/
+/* --- O NÁS (OPRAVENO PRO VIDEO) --- */
 
 .video-container {
     position: relative;
@@ -201,19 +200,25 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #000; /* Důležité pozadí */
 }
 
 .hero-video-bg {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto;
     object-fit: cover;
-    z-index: -1;
+    z-index: 1; /* Opraveno z -1 na 1, aby bylo nad body pozadím */
 }
 
 .hero-video-overlay {
+    position: relative;
+    z-index: 2; /* Overlay musí být nad videem */
     width: 100%;
     height: 100%;
     background: linear-gradient(0deg, rgba(26,26,27,1) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 100%);
@@ -232,8 +237,12 @@ a {
     line-height: 0.9;
     margin-bottom: 15px;
     background: linear-gradient(to bottom, #fff, #999);
-
+    
+    /* OPRAVENO: Přidáno clip, aby byl text vidět */
+    -webkit-background-clip: text; 
+    background-clip: text; 
     -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
 .about-content {
@@ -304,7 +313,7 @@ a {
     margin-bottom: 8px;
 }
 
-/* --- FOOTER --- */
+/*FOOTER*/
 .site-footer {
     background-color: #111112; 
     padding: 80px 0 0; 
