@@ -1,11 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doprava a Platba</title>
+    <title>Doprava a platba (2/3) | All for Bikes</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    
+
+    <header class="site-header"> 
+        <div class="container header-content">
+            <div class="logo-wrapper">
+                <a href="index.html" class="logo-link"><img src="assets/images/logo.png" alt="Logo"></a>
+            </div>
+            <nav class="main-nav"> 
+                <ul class="nav-list">
+                    <li><a href="index.html">Domů</a></li>
+                    <li><a href="kategorie.html">Kategorie</a></li>
+                    <li><a href="produkty.html">Kola</a></li>
+                    <li><a href="o-nas.html">O nás</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="kosik-krok1.html" class="action-item cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container cart-section">
+        <div class="checkout-steps">
+            <div class="step finished">✓ Košík</div>
+            <div class="step active">2. Doprava a platba</div>
+            <div class="step">3. Shrnutí</div>
+        </div>
+
+        <div class="cart-layout">
+            <div class="checkout-form-container">
+                <h2>Způsob dopravy</h2>
+                <div class="radio-group">
+                    <label class="radio-card">
+                        <input type="radio" name="doprava" checked>
+                        <span class="radio-info">
+                            <span class="radio-title">PPL Kurýr</span>
+                            <span class="radio-desc">Doručení na adresu</span>
+                        </span>
+                        <span class="radio-price">Zdarma</span>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="doprava">
+                        <span class="radio-info">
+                            <span class="radio-title">Osobní odběr</span>
+                            <span class="radio-desc">Showroom Praha</span>
+                        </span>
+                        <span class="radio-price">Zdarma</span>
+                    </label>
+                </div>
+
+                <h2 style="margin-top: 40px;">Způsob platby</h2>
+                <div class="radio-group">
+                    <label class="radio-card">
+                        <input type="radio" name="platba" checked>
+                        <span class="radio-title">Platba kartou online</span>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="platba">
+                        <span class="radio-title">Převodem na účet</span>
+                    </label>
+                </div>
+
+                <h2 style="margin-top: 40px;">Osobní údaje</h2>
+                <form class="contact-form no-bg">
+                    <div class="form-row">
+                        <div class="form-group"><label>Jméno</label><input type="text"></div>
+                        <div class="form-group"><label>Příjmení</label><input type="text"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group"><label>Email</label><input type="email"></div>
+                        <div class="form-group"><label>Telefon</label><input type="tel"></div>
+                    </div>
+                    <div class="form-group"><label>Ulice a číslo</label><input type="text"></div>
+                    <div class="form-row">
+                        <div class="form-group"><label>Město</label><input type="text"></div>
+                        <div class="form-group"><label>PSČ</label><input type="text"></div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="cart-summary-box">
+                <h3>Souhrn objednávky</h3>
+                <div class="summary-total">
+                    <span>Celkem</span>
+                    <span>159 990 Kč</span>
+                </div>
+                <a href="kosik-krok3.html" class="btn-primary full-width">Pokračovat na shrnutí</a>
+                <a href="kosik-krok1.html" class="back-link">Zpět do košíku</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-section">
+                <h4>Informace</h4>
+                <ul><li><a href="o-nas.html">O nás</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
+            </div>
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <p>Email: <a href="mailto:info@allforbikes.cz">info@allforbikes.cz</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Sledujte nás</h4>
+                <ul><li><a href="404.html">Instagram</a></li><li><a href="404.html">Facebook</a></li></ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"><p>© 2026 All for Bikes</p></div>
+        </div>
+    </footer>
 </body>
 </html>
