@@ -1,70 +1,192 @@
-/*TABLET (max 1024px)*/
-@media (max-width: 1024px) {
-    .category-grid,
-    .product-grid {
+
+/*TABLET A MENŠÍ LAPTOPY (do 1024px)*/
+@media screen and (max-width: 1024px) {
+    
+    .container {
+        padding: 0 20px;
+    }
+
+    .product-grid, 
+    .category-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
-    
+
     .product-main-card {
         padding: 30px;
-        gap: 40px;
+        gap: 30px;
+    }
+
+    .product-detail-title {
+        font-size: 2.5rem;
     }
 }
 
-/*MOBILNÍ TELEFONY (max 900px - spojené s košíkem)*/
-@media (max-width: 900px) {
-    /* Košík specifika */
-    .cart-layout { grid-template-columns: 1fr; }
-    .cart-summary-box { position: static; margin-top: 20px; }
-    .success-actions { flex-direction: column-reverse; }
-    .added-product-preview { flex-direction: column; text-align: center; }
+/*TABLET NA VÝŠKU A VELKÉ MOBILY (do 900px)*/
+@media screen and (max-width: 900px) {
     
-    .checkout-form-container .form-row { flex-direction: column; gap: 0; }
-}
-
-@media (max-width: 768px) {
-    /* HLAVIČKA */
-    .header-content {
-        flex-direction: column; padding: 20px 0; gap: 20px; text-align: center;
-    }
-    .nav-list { gap: 15px; flex-wrap: wrap; justify-content: center; }
-
-    /* GRIDY */
-    .about-grid, .footer-grid, .category-grid, .product-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-form .form-row { grid-template-columns: 1fr; }
-
-    .contact-form { padding: 25px; }
-    .contact-info-blocks { flex-direction: column; gap: 40px; }
-
-    .product-main-card { grid-template-columns: 1fr; }
-    .product-detail-title { font-size: 2rem; }
-    .product-description-wrapper { padding: 0; }
-
-    .section-title { font-size: 1.8rem; }
-    .recommended-section, .category-section { padding: 40px 15px; }
-    .category-image { height: 200px; }
-
-    .error-content h1 { font-size: 6rem; }
-}
-
-/*MALÉ MOBILY (max 480px)*/
-@media (max-width: 480px) {
-    .nav-list { flex-direction: column; gap: 10px; }
-    .logo-link img { height: 40px; }
-}
-
-/* Responsivita */
-@media (max-width: 768px) {
     .cart-layout {
+        display: flex;   
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .cart-summary-box {
+        position: static; 
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .about-text h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/*MOBILNÍ TELEFONY (do 768px)*/
+@media screen and (max-width: 768px) {
+
+    .header-content {
+        flex-direction: column;
+        padding: 15px 0;
+        gap: 15px;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .logo-link img {
+        height: 45px;
+    }
+
+    /* TEXTY A NADPISY */
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .section-title {
+        font-size: 2rem; 
+        word-wrap: break-word;
+        padding: 0 10px;
+    }
+
+    .video-container {
+        height: 60vh;
+    }
+
+    .contact-info-blocks {
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 40px;
+    }
+
+    .contact-form {
+        padding: 25px 20px;
+    }
+
+    .form-row, 
+    .contact-form .form-row,
+    .checkout-form-container .form-row {
         display: flex;
         flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .product-grid, 
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-main-card {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .product-detail-title {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .footer-section h4 {
+        margin-bottom: 15px;
     }
     
-    .cart-summary-box {
-        margin-top: 30px;
+    .success-actions {
+        flex-direction: column-reverse;
+    }
+    
+    .added-product-preview {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/*MALÉ MOBILY (do 480px)*/
+@media screen and (max-width: 480px) {
+    
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-list li {
+        width: 100%;
+        border-bottom: 1px solid #333;
+        padding-bottom: 5px;
+    }
+
+    .nav-list li:last-child {
+        border-bottom: none;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .cart-img img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .cart-price {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .remove-btn {
+        margin-top: 10px;
+    }
+
+    .btn-primary, .btn-submit, .btn-submit-order {
+        width: 100%;
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+
+    .hero-title, .section-title {
+        font-size: 1.8rem;
     }
 }
