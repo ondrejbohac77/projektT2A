@@ -1,0 +1,61 @@
+/* --- TABLET (max 1024px) --- */
+@media (max-width: 1024px) {
+    .category-grid,
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .product-main-card {
+        padding: 30px;
+        gap: 40px;
+    }
+}
+
+/* --- MOBILNÍ TELEFONY (max 900px - spojené s košíkem) --- */
+@media (max-width: 900px) {
+    /* Košík specifika */
+    .cart-layout { grid-template-columns: 1fr; }
+    .cart-summary-box { position: static; margin-top: 20px; }
+    .success-actions { flex-direction: column-reverse; }
+    .added-product-preview { flex-direction: column; text-align: center; }
+    
+    /* V košíku chceme inputy pod sebou */
+    .checkout-form-container .form-row { flex-direction: column; gap: 0; }
+}
+
+/* --- MOBILNÍ TELEFONY (max 768px) --- */
+@media (max-width: 768px) {
+    /* HLAVIČKA */
+    .header-content {
+        flex-direction: column; padding: 20px 0; gap: 20px; text-align: center;
+    }
+    .nav-list { gap: 15px; flex-wrap: wrap; justify-content: center; }
+
+    /* GRIDY */
+    .about-grid, .footer-grid, .category-grid, .product-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* U kontaktu .form-row přepíšeme zpět na grid, pokud není v košíku */
+    .contact-form .form-row { grid-template-columns: 1fr; }
+
+    .contact-form { padding: 25px; }
+    .contact-info-blocks { flex-direction: column; gap: 40px; }
+
+    .product-main-card { grid-template-columns: 1fr; }
+    .product-detail-title { font-size: 2rem; }
+    .product-description-wrapper { padding: 0; }
+
+    .section-title { font-size: 1.8rem; }
+    .recommended-section, .category-section { padding: 40px 15px; }
+    .category-image { height: 200px; }
+
+    .error-content h1 { font-size: 6rem; }
+}
+
+/* --- MALÉ MOBILY (max 480px) --- */
+@media (max-width: 480px) {
+    .nav-list { flex-direction: column; gap: 10px; }
+    .logo-link img { height: 40px; }
+}

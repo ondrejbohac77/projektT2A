@@ -1,0 +1,143 @@
+/* ==========================================================================
+   NÁKUPNÍ PROCES (KOŠÍK, CHECKOUT, SUCCESS PAGES)
+   ========================================================================== */
+
+/* --- Indikátor kroků --- */
+.checkout-steps {
+    display: flex; justify-content: center; gap: 15px; margin-bottom: 50px;
+    border-bottom: 1px solid #333; padding-bottom: 20px; flex-wrap: wrap;
+}
+.step { color: #666; font-weight: 600; padding: 0 10px; font-size: 0.95rem; }
+.step.active { color: #3b82f6; }
+.step.finished { color: #fff; }
+
+/* --- Layout --- */
+.cart-section { padding-top: 40px; padding-bottom: 80px; }
+.cart-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start; }
+
+/* --- Levý sloupec: Seznam produktů --- */
+.cart-items {
+    background: #232324; border-radius: 15px; padding: 30px; border: 1px solid #333;
+}
+.cart-item {
+    display: flex; align-items: center; gap: 20px; padding-bottom: 20px;
+    margin-bottom: 20px; border-bottom: 1px solid #444;
+}
+.cart-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.cart-img img {
+    width: 80px; height: 80px; object-fit: cover; border-radius: 8px; background: #fff;
+}
+.cart-details { flex-grow: 1; }
+.cart-details h4 { font-size: 1.1rem; margin: 0 0 5px 0; color: #fff; }
+.cart-details .text-gray, .cart-details small { color: #888; font-size: 0.9rem; display: block; }
+.cart-quantity input {
+    background: #050505; border: 1px solid #444; color: #fff; width: 60px;
+    padding: 8px; text-align: center; border-radius: 5px; font-weight: bold;
+}
+.cart-price { font-weight: 700; font-size: 1.1rem; white-space: nowrap; color: #fff; margin-left: 10px; }
+.remove-btn {
+    background: none; border: none; color: #666; font-size: 1.5rem;
+    cursor: pointer; transition: 0.2s; margin-left: 10px; padding: 0 10px;
+}
+.remove-btn:hover { color: #ef4444; }
+
+/* --- Checkout Formuláře --- */
+.checkout-form-container h2 { font-size: 1.4rem; margin-bottom: 20px; color: #fff; }
+.radio-group { display: flex; flex-direction: column; gap: 15px; }
+.radio-card {
+    display: flex; align-items: center; padding: 20px; background: #1a1a1b;
+    border: 1px solid #333; border-radius: 10px; cursor: pointer;
+    transition: all 0.2s ease; position: relative;
+}
+.radio-card:hover { border-color: #555; background: #232324; }
+.radio-card input:checked + .radio-info { color: #3b82f6; }
+.radio-card input { margin-right: 20px; transform: scale(1.3); accent-color: #3b82f6; }
+.radio-info { flex-grow: 1; display: flex; flex-direction: column; }
+.radio-title { font-weight: 700; color: #fff; }
+.radio-desc { font-size: 0.85rem; color: #888; margin-top: 3px; }
+.radio-price { font-weight: 700; color: #22c55e; }
+
+.contact-form.no-bg { background: transparent; padding: 0; border: none; }
+/* Poznámka: .form-row je definován v contact.css, ale zde se používá flex */
+/* Přepíšeme specificky pro cart kontext v responsive.css nebo zde, ale necháme to plavat, 
+   protože grid v contact.css funguje podobně jako flex */
+
+/* --- Shrnutí (Review) --- */
+.review-container { display: flex; flex-direction: column; gap: 30px; }
+.review-block {
+    background: #232324; padding: 25px; border-radius: 15px;
+    border: 1px solid #333; position: relative;
+}
+.review-block h3 {
+    margin-bottom: 15px; font-size: 1.2rem; border-bottom: 1px solid #444; padding-bottom: 10px;
+}
+.review-block p { color: #ccc; margin-bottom: 5px; }
+.edit-link {
+    position: absolute; top: 25px; right: 25px; color: #3b82f6;
+    text-decoration: none; font-size: 0.9rem;
+}
+.edit-link:hover { text-decoration: underline; }
+.cart-items.small-view { border: none; padding: 0; background: transparent; }
+.cart-items.small-view .cart-item { padding-bottom: 15px; margin-bottom: 15px; }
+
+/* --- Pravý sloupec: Souhrn (Sticky) --- */
+.cart-summary-box {
+    background: #232324; border: 1px solid #333; border-radius: 15px;
+    padding: 30px; height: fit-content; position: sticky; top: 120px;
+}
+.cart-summary-box h3 {
+    margin-bottom: 20px; border-bottom: 1px solid #444; padding-bottom: 15px; color: #fff;
+}
+.summary-row {
+    display: flex; justify-content: space-between; margin-bottom: 15px; color: #aaa; font-size: 1rem;
+}
+.summary-total {
+    display: flex; justify-content: space-between; font-size: 1.4rem; font-weight: 900;
+    margin: 20px 0; padding-top: 20px; border-top: 1px solid #444; color: #fff;
+}
+.full-width {
+    width: 100%; text-align: center; display: block; padding: 15px;
+    border-radius: 50px; font-weight: bold; font-size: 1rem; cursor: pointer;
+}
+.back-link {
+    display: block; text-align: center; margin-top: 15px;
+    color: #666; font-size: 0.9rem; text-decoration: none;
+}
+.back-link:hover { color: #fff; }
+
+/* --- Success Pages --- */
+.success-page-wrapper {
+    display: flex; justify-content: center; align-items: center;
+    min-height: 60vh; padding: 40px 20px;
+}
+.success-card {
+    background: #232324; padding: 50px; border-radius: 20px;
+    border: 1px solid #333; text-align: center; max-width: 700px;
+    width: 100%; box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+.success-icon {
+    width: 80px; height: 80px; background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6; border: 2px solid #3b82f6; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; margin: 0 auto 30px;
+}
+.success-title { font-size: 2rem; margin-bottom: 30px; line-height: 1.2; color: #fff; }
+.added-product-preview {
+    display: flex; align-items: center; background: #1a1a1b; padding: 20px;
+    border-radius: 12px; border: 1px solid #333; margin-bottom: 40px;
+    text-align: left; gap: 25px;
+}
+.added-product-preview img { width: 100px; height: auto; border-radius: 8px; object-fit: cover; }
+.added-product-info h2 { font-size: 1.2rem; margin-bottom: 5px; color: #fff; }
+.added-product-info .variant { color: #888; font-size: 0.9rem; margin-bottom: 8px; }
+.added-product-info .price { color: #fff; font-weight: 700; }
+.success-actions { display: flex; gap: 20px; justify-content: center; }
+.btn-primary-large, .btn-secondary-large {
+    display: flex; align-items: center; justify-content: center;
+    padding: 15px 30px; border-radius: 50px; font-weight: 700;
+    text-transform: uppercase; font-size: 0.9rem; text-decoration: none;
+    transition: 0.3s; width: 100%;
+}
+.btn-primary-large { background: #3b82f6; color: #fff; }
+.btn-primary-large:hover { background: #2563eb; box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4); }
+.btn-secondary-large { background: transparent; border: 2px solid #444; color: #fff; }
+.btn-secondary-large:hover { border-color: #fff; background: rgba(255,255,255,0.05); }

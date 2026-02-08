@@ -1,0 +1,141 @@
+/* --- SITE HEADER --- */
+.site-header {
+    background-color: #1a1a1b;
+    color: #ffffff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+}
+
+.logo-link img {
+    height: 55px;
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover img {
+    transform: scale(1.03);
+}
+
+/* --- NAVIGACE --- */
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-list a {
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: none;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+
+.nav-list a:hover {
+    color: #3b82f6;
+}
+
+/* UŽIVATELSKÉ AKCE */
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.action-item.cart svg {
+    width: 32px;  
+    height: 32px;
+    fill: #ffffff;
+    transition: transform 0.2s, fill 0.2s;
+}
+
+.action-item.cart:hover svg {
+    transform: scale(1.1);
+    fill: #3b82f6;
+}
+
+/* --- FOOTER --- */
+.site-footer {
+    background-color: #111112;
+    padding: 80px 0 0;
+    border-top: 1px solid #333;
+    color: #ffffff;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-section h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    color: #3b82f6;
+}
+
+.footer-section ul { list-style: none; }
+.footer-section ul li { margin-bottom: 12px; }
+
+.footer-section ul li a {
+    font-size: 0.95rem;
+    color: #a1a1a1;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover { color: #ffffff; }
+
+.footer-section ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #3b82f6;
+    transition: width 0.3s ease;
+}
+
+.footer-section ul li a:hover::after { width: 100%; }
+
+.footer-section p { font-size: 0.95rem; color: #a1a1a1; }
+.footer-section p a { color: #3b82f6; font-weight: 600; }
+
+.footer-bottom {
+    background-color: #0a0a0b;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.disclaimer {
+    margin-bottom: 10px;
+    opacity: 0.7;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
