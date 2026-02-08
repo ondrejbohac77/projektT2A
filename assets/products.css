@@ -1,4 +1,4 @@
-/* --- SEKCE PRODUKTŮ --- */
+/*SEKCE PRODUKTŮ*/
 .recommended-section { padding: 80px 0; }
 .section-title {
     font-size: 2.5rem; text-transform: uppercase; font-weight: 900;
@@ -26,7 +26,7 @@
 }
 .btn-add:hover { background-color: #2563eb; }
 
-/* --- SEKCE KATEGORIÍ --- */
+/*SEKCE KATEGORIÍ*/
 .category-section { padding: 60px 25px; }
 .category-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
 .category-card {
@@ -46,7 +46,7 @@
 }
 .category-card:hover .category-info h3 { color: #3b82f6; }
 
-/* --- DETAIL PRODUKTU --- */
+/*DETAIL PRODUKTU*/
 .product-detail-section { padding: 60px 25px; }
 .product-main-card {
     display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px;

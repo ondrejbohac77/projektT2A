@@ -1,8 +1,5 @@
-/* ==========================================================================
-   NÁKUPNÍ PROCES (KOŠÍK, CHECKOUT, SUCCESS PAGES)
-   ========================================================================== */
 
-/* --- Indikátor kroků --- */
+/*Indikátor kroků*/
 .checkout-steps {
     display: flex; justify-content: center; gap: 15px; margin-bottom: 50px;
     border-bottom: 1px solid #333; padding-bottom: 20px; flex-wrap: wrap;
@@ -11,11 +8,11 @@
 .step.active { color: #3b82f6; }
 .step.finished { color: #fff; }
 
-/* --- Layout --- */
+/*Layout*/
 .cart-section { padding-top: 40px; padding-bottom: 80px; }
 .cart-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start; }
 
-/* --- Levý sloupec: Seznam produktů --- */
+/*Levý sloupec: Seznam produktů*/
 .cart-items {
     background: #232324; border-radius: 15px; padding: 30px; border: 1px solid #333;
 }
@@ -41,7 +38,7 @@
 }
 .remove-btn:hover { color: #ef4444; }
 
-/* --- Checkout Formuláře --- */
+/*Checkout Formuláře*/
 .checkout-form-container h2 { font-size: 1.4rem; margin-bottom: 20px; color: #fff; }
 .radio-group { display: flex; flex-direction: column; gap: 15px; }
 .radio-card {
@@ -58,11 +55,8 @@
 .radio-price { font-weight: 700; color: #22c55e; }
 
 .contact-form.no-bg { background: transparent; padding: 0; border: none; }
-/* Poznámka: .form-row je definován v contact.css, ale zde se používá flex */
-/* Přepíšeme specificky pro cart kontext v responsive.css nebo zde, ale necháme to plavat, 
-   protože grid v contact.css funguje podobně jako flex */
 
-/* --- Shrnutí (Review) --- */
+/*Shrnutí (Review)*/
 .review-container { display: flex; flex-direction: column; gap: 30px; }
 .review-block {
     background: #232324; padding: 25px; border-radius: 15px;
@@ -80,7 +74,7 @@
 .cart-items.small-view { border: none; padding: 0; background: transparent; }
 .cart-items.small-view .cart-item { padding-bottom: 15px; margin-bottom: 15px; }
 
-/* --- Pravý sloupec: Souhrn (Sticky) --- */
+/*Pravý sloupec: Souhrn (Sticky)*/
 .cart-summary-box {
     background: #232324; border: 1px solid #333; border-radius: 15px;
     padding: 30px; height: fit-content; position: sticky; top: 120px;
@@ -142,11 +136,10 @@
 .btn-secondary-large { background: transparent; border: 2px solid #444; color: #fff; }
 .btn-secondary-large:hover { border-color: #fff; background: rgba(255,255,255,0.05); }
 
-/* --- Souhlasy a checkboxy v souhrnu --- */
 .legal-consent-block {
     margin-top: 20px;
     padding-top: 20px;
-    border-top: 1px solid #444; /* Stejná čára jako u celkové ceny */
+    border-top: 1px solid #444;
 }
 
 .checkbox-item {
@@ -157,19 +150,19 @@
     cursor: pointer;
     font-size: 0.85rem;
     line-height: 1.5;
-    color: #aaa; /* Jemnější šedá barva textu */
+    color: #aaa;
 }
 
 .checkbox-item input[type="checkbox"] {
     min-width: 18px;
     min-height: 18px;
     margin-top: 2px;
-    accent-color: #3b82f6; /* Tvoje modrá barva pro zaškrtnutí */
+    accent-color: #3b82f6;
     cursor: pointer;
 }
 
 .checkbox-item a {
-    color: #3b82f6; /* Modré odkazy */
+    color: #3b82f6;
     text-decoration: none;
     font-weight: 600;
 }

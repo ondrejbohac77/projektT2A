@@ -1,4 +1,4 @@
-/* --- SITE HEADER --- */
+/*SITE HEADER*/
 .site-header {
     background-color: #1a1a1b;
     color: #ffffff;
@@ -27,7 +27,7 @@
     transform: scale(1.03);
 }
 
-/* --- NAVIGACE --- */
+/*NAVIGACE*/
 .nav-list {
     display: flex;
     list-style: none;
@@ -47,7 +47,7 @@
     color: #3b82f6;
 }
 
-/* UŽIVATELSKÉ AKCE */
+/*UŽIVATELSKÉ AKCE*/
 .user-actions {
     display: flex;
     align-items: center;

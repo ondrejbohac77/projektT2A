@@ -1,4 +1,4 @@
-/* --- GLOBÁLNÍ RESET A ZÁKLAD --- */
+/*GLOBÁLNÍ RESET A ZÁKLAD*/
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +30,7 @@ a {
     transition: 0.3s;
 }
 
-/* --- GLOBÁLNÍ TLAČÍTKA A 404 --- */
+/*GLOBÁLNÍ TLAČÍTKA A 404*/
 .btn-primary {
     display: inline-block;
     background-color: #3b82f6;
