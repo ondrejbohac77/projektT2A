@@ -141,3 +141,39 @@
 .btn-primary-large:hover { background: #2563eb; box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4); }
 .btn-secondary-large { background: transparent; border: 2px solid #444; color: #fff; }
 .btn-secondary-large:hover { border-color: #fff; background: rgba(255,255,255,0.05); }
+
+/* --- Souhlasy a checkboxy v souhrnu --- */
+.legal-consent-block {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #444; /* Stejná čára jako u celkové ceny */
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #aaa; /* Jemnější šedá barva textu */
+}
+
+.checkbox-item input[type="checkbox"] {
+    min-width: 18px;
+    min-height: 18px;
+    margin-top: 2px;
+    accent-color: #3b82f6; /* Tvoje modrá barva pro zaškrtnutí */
+    cursor: pointer;
+}
+
+.checkbox-item a {
+    color: #3b82f6; /* Modré odkazy */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.checkbox-item a:hover {
+    text-decoration: underline;
+}

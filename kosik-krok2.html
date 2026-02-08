@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <title>Doprava a platba (2/3) | All for Bikes</title>
     <link rel="stylesheet" href="assets/style.css">
+    <style>
+        /* Styl pro tlačítko, aby vypadalo stejně jako původní odkaz */
+        .btn-submit-fix {
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 
@@ -36,12 +44,13 @@
             <div class="step">3. Shrnutí</div>
         </div>
 
-        <div class="cart-layout">
+        <form action="kosik-krok3.html" method="GET" class="cart-layout">
+            
             <div class="checkout-form-container">
                 <h2>Způsob dopravy</h2>
                 <div class="radio-group">
                     <label class="radio-card">
-                        <input type="radio" name="doprava" checked>
+                        <input type="radio" name="doprava" value="ppl" checked>
                         <span class="radio-info">
                             <span class="radio-title">PPL Kurýr</span>
                             <span class="radio-desc">Doručení na adresu</span>
@@ -49,7 +58,7 @@
                         <span class="radio-price">Zdarma</span>
                     </label>
                     <label class="radio-card">
-                        <input type="radio" name="doprava">
+                        <input type="radio" name="doprava" value="osobni">
                         <span class="radio-info">
                             <span class="radio-title">Osobní odběr</span>
                             <span class="radio-desc">Showroom Praha</span>
@@ -61,31 +70,31 @@
                 <h2 style="margin-top: 40px;">Způsob platby</h2>
                 <div class="radio-group">
                     <label class="radio-card">
-                        <input type="radio" name="platba" checked>
+                        <input type="radio" name="platba" value="karta" checked>
                         <span class="radio-title">Platba kartou online</span>
                     </label>
                     <label class="radio-card">
-                        <input type="radio" name="platba">
+                        <input type="radio" name="platba" value="prevod">
                         <span class="radio-title">Převodem na účet</span>
                     </label>
                 </div>
 
                 <h2 style="margin-top: 40px;">Osobní údaje</h2>
-                <form class="contact-form no-bg">
+                <div class="contact-form no-bg">
                     <div class="form-row">
-                        <div class="form-group"><label>Jméno</label><input type="text"></div>
-                        <div class="form-group"><label>Příjmení</label><input type="text"></div>
+                        <div class="form-group"><label>Jméno</label><input type="text" name="name" required></div>
+                        <div class="form-group"><label>Příjmení</label><input type="text" name="surname" required></div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group"><label>Email</label><input type="email"></div>
-                        <div class="form-group"><label>Telefon</label><input type="tel"></div>
+                        <div class="form-group"><label>Email</label><input type="email" name="email" required></div>
+                        <div class="form-group"><label>Telefon</label><input type="tel" name="phone" required></div>
                     </div>
-                    <div class="form-group"><label>Ulice a číslo</label><input type="text"></div>
+                    <div class="form-group"><label>Ulice a číslo</label><input type="text" name="address" required></div>
                     <div class="form-row">
-                        <div class="form-group"><label>Město</label><input type="text"></div>
-                        <div class="form-group"><label>PSČ</label><input type="text"></div>
+                        <div class="form-group"><label>Město</label><input type="text" name="city" required></div>
+                        <div class="form-group"><label>PSČ</label><input type="text" name="zip" required></div>
                     </div>
-                </form>
+                </div>
             </div>
 
             <div class="cart-summary-box">
@@ -94,10 +103,15 @@
                     <span>Celkem</span>
                     <span>300 000 Kč</span>
                 </div>
-                <a href="kosik-krok3.html" class="btn-primary full-width">Pokračovat na shrnutí</a>
+                
+                <button type="submit" class="btn-primary full-width btn-submit-fix">
+                    Pokračovat na shrnutí
+                </button>
+                
                 <a href="kosik-krok1.html" class="back-link">Zpět do košíku</a>
             </div>
-        </div>
+            
+        </form>
     </main>
 
     <footer class="site-footer">
