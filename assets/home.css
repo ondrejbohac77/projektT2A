@@ -82,12 +82,50 @@
 .feature-item h4 { font-size: 1.2rem; color: #fff; margin-bottom: 8px; }
 
 /*TÝM*/
-.team-section { padding: 80px 25px; }
-.team-card { text-align: center; }
-.team-photo {
-    width: 180px; height: 180px; object-fit: cover;
-    border-radius: 50%; border: 3px solid #3b82f6;
-    margin: 0 auto; transition: transform 0.3s ease;
+.team-section { padding: 100px 25px; }
+
+.team-card {
+    text-align: center;
+    padding: 45px 30px;
+    border-radius: 20px;
+    background: #232324;
+    border: 1px solid #333;
+    transition: all 0.4s ease;
 }
-.team-card:hover .team-photo { transform: scale(1.05); border-color: #ffffff; }
-.team-desc { font-size: 0.9rem; color: #a1a1a1; margin-top: 15px; line-height: 1.5; }
+
+.team-card:hover {
+    background: #2a2a2b;
+    border-color: #3b82f6;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.team-card .product-image {
+    margin: 0 0 25px 0;
+    justify-content: center;
+}
+
+.team-card .team-photo {
+    width: 180px;
+    height: 180px;
+    max-height: 180px; /* Přepisuje omezení z components.css */
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #3b82f6;
+    padding: 5px; /* Vytvoří mezeru mezi fotkou a modrým kruhem */
+    margin: 0 auto;
+    transition: all 0.4s ease;
+    display: block;
+}
+
+.team-card:hover .team-photo {
+    transform: scale(1.05);
+    border-color: #ffffff;
+}
+
+.team-desc {
+    font-size: 1rem;
+    color: #a1a1a1;
+    margin-top: 15px;
+    line-height: 1.6;
+}

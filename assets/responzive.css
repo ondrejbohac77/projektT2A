@@ -3,7 +3,7 @@
 @media screen and (max-width: 1024px) {
     
     .container {
-        padding: 0 20px;
+        padding: 0 15px;
     }
 
     .product-grid, 
@@ -19,6 +19,10 @@
 
     .product-detail-title {
         font-size: 2.5rem;
+    }
+
+    .logo-link img {
+        height: 60px;
     }
 }
 
@@ -53,19 +57,111 @@
 @media screen and (max-width: 768px) {
 
     .header-content {
-        flex-direction: column;
-        padding: 15px 0;
-        gap: 15px;
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        grid-template-areas: "logo cart burger" "search search search";
+        padding: 10px 10px;
+        gap: 10px;
+    }
+
+    .logo-wrapper { grid-area: logo; }
+    .user-actions { grid-area: cart; }
+    .header-search { grid-area: search; max-width: none; margin: 5px 0; }
+    .nav-toggle-label { grid-area: burger; display: flex; }
+
+    /* HAMBURGER IKONA */
+    .nav-toggle-label {
+        height: 100%;
+        cursor: pointer;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        display: block;
+        background: white;
+        height: 2px;
+        width: 25px;
+        border-radius: 2px;
+        position: relative;
+    }
+
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        content: '';
+        position: absolute;
+    }
+
+    .nav-toggle-label span::before { bottom: 8px; }
+    .nav-toggle-label span::after { top: 8px; }
+
+    /* SKRYTÁ NAVIGACE */
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #1a1a1b;
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: transform 400ms ease-in-out;
+        z-index: 999;
+        border-bottom: 2px solid #3b82f6;
     }
 
     .nav-list {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+        flex-direction: column;
+        gap: 0;
+        align-items: stretch;
     }
 
-    .logo-link img {
-        height: 45px;
+    .nav-list li {
+        border-bottom: 1px solid #333;
+    }
+
+    .nav-list a {
+        display: block;
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* ZOBRAZENÍ MENU PŘI KLIKNUTÍ */
+    .nav-toggle:checked ~ .main-nav {
+        transform: scale(1, 1);
+    }
+
+    /* KOŠÍK KROK 2 - SPECIFICKÉ ÚPRAVY */
+    .cart-section {
+        padding: 40px 0;
+    }
+
+    .checkout-steps {
+        gap: 5px;
+        margin-bottom: 30px;
+    }
+
+    .step {
+        font-size: 0.75rem;
+        padding: 8px 5px;
+    }
+
+    .radio-card {
+        padding: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .radio-price {
+        margin-left: 30px; /* Zarovnání s textem vedle radio buttonu */
+        font-weight: 800;
+    }
+
+    .checkout-form-container h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
     }
 
     /* TEXTY A NADPISY */
@@ -90,7 +186,7 @@
     }
 
     .contact-form {
-        padding: 25px 20px;
+        padding: 20px 15px;
     }
 
     .form-row, 
@@ -99,6 +195,10 @@
         display: flex;
         flex-direction: column;
         gap: 15px;
+    }
+    
+    .cart-summary-box {
+        padding: 25px 20px;
     }
 
     .form-group {
@@ -111,8 +211,15 @@
     }
 
     .product-main-card {
-        grid-template-columns: 1fr;
-        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 15px;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .product-gallery, .product-buy-box {
+        width: 100%;
     }
 
     .product-detail-title {
@@ -143,6 +250,10 @@
 /*MALÉ MOBILY (do 480px)*/
 @media screen and (max-width: 480px) {
     
+    .container {
+        padding: 0 10px;
+    }
+
     .nav-list {
         flex-direction: column;
         gap: 10px;
