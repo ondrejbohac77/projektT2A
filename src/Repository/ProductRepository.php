@@ -10,7 +10,7 @@ final class ProductRepository {
 	 * Společný SELECT pro všechny dotazy na produkty.
 	 * Obsahuje JOIN na kategorie a subquery pro zjištění, zda má produkt volitelné varianty.
 	 */
-	private const string BASE_SELECT = '
+	private const BASE_SELECT = '
 		SELECT p.*, c.name AS category_name, c.slug AS category_slug,
 			EXISTS (
 				SELECT 1 FROM product_parameters pp
@@ -32,7 +32,7 @@ final class ProductRepository {
 	public function getAll(): array {
 		$stmt = $this->db->query(self::BASE_SELECT . ' ORDER BY p.created_at DESC');
 
-		return array_map(ProductDTO::fromRow(...), $stmt->fetchAll());
+		return array_map(fn($row) => ProductDTO::fromRow($row), $stmt->fetchAll());
 	}
 
 	/**
@@ -71,7 +71,7 @@ final class ProductRepository {
 		');
 		$stmt->execute(['categoryId' => $categoryId]);
 
-		return array_map(ProductDTO::fromRow(...), $stmt->fetchAll());
+		return array_map(fn($row) => ProductDTO::fromRow($row), $stmt->fetchAll());
 	}
 
 	/**
@@ -86,7 +86,7 @@ final class ProductRepository {
 		');
 		$stmt->execute(['slug' => $slug]);
 
-		return array_map(ProductDTO::fromRow(...), $stmt->fetchAll());
+		return array_map(fn($row) => ProductDTO::fromRow($row), $stmt->fetchAll());
 	}
 
 	/**
@@ -104,7 +104,7 @@ final class ProductRepository {
 		$stmt->bindValue('limit', $limit, PDO::PARAM_INT);
 		$stmt->execute();
 
-		return array_map(ProductDTO::fromRow(...), $stmt->fetchAll());
+		return array_map(fn($row) => ProductDTO::fromRow($row), $stmt->fetchAll());
 	}
 
 	/**
@@ -122,7 +122,7 @@ final class ProductRepository {
 		");
 		$stmt->execute(['query' => '%' . $escaped . '%']);
 
-		return array_map(ProductDTO::fromRow(...), $stmt->fetchAll());
+		return array_map(fn($row) => ProductDTO::fromRow($row), $stmt->fetchAll());
 	}
 
 	/**
@@ -138,7 +138,7 @@ final class ProductRepository {
         ');
 		$stmt->execute(['productId' => $productId]);
 
-		return array_map(ProductImageDTO::fromRow(...), $stmt->fetchAll());
+		return array_map(fn($row) => ProductImageDTO::fromRow($row), $stmt->fetchAll());
 	}
 
 	/**
@@ -154,7 +154,7 @@ final class ProductRepository {
         ');
 		$stmt->execute(['productId' => $productId]);
 
-		return array_map(ProductParameterDTO::fromRow(...), $stmt->fetchAll());
+		return array_map(fn($row) => ProductParameterDTO::fromRow($row), $stmt->fetchAll());
 	}
 
 }

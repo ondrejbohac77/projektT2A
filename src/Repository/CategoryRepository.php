@@ -19,7 +19,7 @@ final class CategoryRepository {
 		$stmt = $this->db->query('SELECT * FROM categories ORDER BY name');
 
 		return array_map(
-			CategoryDTO::fromRow(...),
+			fn($row) => CategoryDTO::fromRow($row),
 			$stmt->fetchAll(),
 		);
 	}

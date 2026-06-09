@@ -18,7 +18,7 @@ final class PaymentMethodRepository {
 	public function getAll(): array {
 		$stmt = $this->db->query('SELECT * FROM payment_methods ORDER BY price');
 
-		return array_map(PaymentMethodDTO::fromRow(...), $stmt->fetchAll());
+		return array_map(fn($row) => PaymentMethodDTO::fromRow($row), $stmt->fetchAll());
 	}
 
 	/**

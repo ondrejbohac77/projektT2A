@@ -18,7 +18,7 @@ final class ShippingMethodRepository {
 	public function getAll(): array {
 		$stmt = $this->db->query('SELECT * FROM shipping_methods ORDER BY price');
 
-		return array_map(ShippingMethodDTO::fromRow(...), $stmt->fetchAll());
+		return array_map(fn($row) => ShippingMethodDTO::fromRow($row), $stmt->fetchAll());
 	}
 
 	/**

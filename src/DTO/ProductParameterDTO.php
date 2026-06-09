@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-readonly class ProductParameterDTO {
+final class ProductParameterDTO {
 
 	public function __construct(
 		public int $id,
@@ -39,7 +39,8 @@ readonly class ProductParameterDTO {
 	 * @return list<string>
 	 */
 	public function getOptions(): array {
-		return array_map(trim(...), explode(',', $this->value));
+
+		return array_map('trim', explode(',', $this->value));
 	}
 
 }

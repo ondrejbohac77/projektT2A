@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-readonly class CategoryDTO {
+final class CategoryDTO {
 
 	public function __construct(
 		public int $id,

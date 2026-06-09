@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 final class Cart {
 
-	private const string SESSION_KEY = 'cart';
+	private const SESSION_KEY = 'cart';
 
 	public function __construct() {
 		if (session_status() === PHP_SESSION_NONE) {

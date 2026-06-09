@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-readonly class CustomerDTO {
+final class CustomerDTO {
 
 	public function __construct(
 		public int $id,

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-readonly class ProductImageDTO {
+final class ProductImageDTO {
 
 	public function __construct(
 		public int $id,

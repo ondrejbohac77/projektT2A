@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-readonly class CartItemDTO {
+final class CartItemDTO {
 
 	public function __construct(
 		public int $productId,

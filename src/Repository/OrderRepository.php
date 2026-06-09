@@ -133,7 +133,7 @@ final class OrderRepository {
         ');
 		$stmt->execute(['orderId' => $orderId]);
 
-		return array_map(OrderItemDTO::fromRow(...), $stmt->fetchAll());
+		return array_map(fn($row) => OrderItemDTO::fromRow($row), $stmt->fetchAll());
 	}
 
 }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-readonly class OrderItemDTO {
+final class OrderItemDTO {
 
 	public function __construct(
 		public int $id,

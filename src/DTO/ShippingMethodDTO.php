@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-readonly class ShippingMethodDTO {
+final class ShippingMethodDTO {
 
 	public function __construct(
 		public int $id,

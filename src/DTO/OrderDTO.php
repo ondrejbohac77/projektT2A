@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-readonly class OrderDTO {
+final class OrderDTO {
 
 	/**
 	 * @param list<OrderItemDTO> $items
